@@ -1,0 +1,282 @@
+/* Reset de estilos */
+@import '~@fortawesome/fontawesome-free/css/all.min.css';
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos globales */
+body {
+    font-family: "Bodoni Moda SC", serif;
+    font-optical-sizing: auto;
+    font-weight: normal;
+    font-style: normal;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+/* Estilos de encabezado */
+header {
+    background: #FDDC34;
+    font-size: 2rem;
+    color: #333;
+    padding: 1rem 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+.logo {
+    width: 100px; 
+    height: auto;  
+}
+
+.hero {
+    background: #5a5757;
+    color: #fff;
+    padding: 5rem 0;
+    text-align: center;
+    position: relative;
+}
+
+.hero::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Añadir transparencia */
+    z-index: 1;
+}
+
+.hero .container {
+    position: relative;
+    z-index: 2;
+}
+
+.hero h2 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.hero .btn {
+    display: inline-block;
+    padding: 0.5rem 1.5rem;
+    background: #ff6b6b;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    margin-top: 1rem;
+    transition: background 0.3s ease;
+}
+
+.hero .btn:hover {
+    background: #f94d6a;
+}
+
+.centered-image-container {
+    display: flex;
+    justify-content: center;
+    margin: 2rem 0;
+}
+
+.centered-image-container img {
+    width: 100%;
+    max-width: 600px; /* Ajusta el tamaño máximo de la imagen aquí */
+    height: auto;
+    border-radius: 8px; /* Añadir bordes redondeados si lo deseas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Añadir sombra si lo deseas */
+}
+
+.info {
+    position: relative;
+    padding: 2rem 0;
+    background: url('../images/fondo4.png') no-repeat center center/cover;
+    color: #fff;
+}
+
+.info::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.info .container {
+    position: relative;
+    z-index: 2;
+}
+
+.info h2 {
+    text-align: center;
+    color: #E1BE08;
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.cards-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    margin-top: 2rem;
+    flex-wrap: wrap;
+}
+
+.card {
+    background: rgba(56, 55, 55, 0.8);
+    padding: 1.5rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    flex: 1 1 calc(50% - 2rem);
+    max-width: calc(50% - 2rem);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card h3 {
+    color: #E1BE08;
+    font-size: 2rem;
+}
+
+.card p {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.values-card {
+    background: rgba(56, 55, 55, 0.8);
+    padding: 1.5rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    margin-top: 2rem;
+}
+
+.values-card h3 {
+    color: #E1BE08;
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.values-card p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin: 0.5rem 0;
+}
+
+.discounts {
+    background: #f3f4f6;
+    padding: 4rem 0;
+    border-top: 5px solid #E1BE08;
+}
+
+.discounts h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    color: #333;
+    font-weight: bold;
+}
+
+.discounts-content {
+    display: flex;
+    justify-content: space-around;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.discount-card {
+    background: #ffffff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    flex: 1 1 calc(45% - 2rem);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+}
+
+.discount-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.discount-icon {
+    background: #E1BE08;
+    border-radius: 50%;
+    padding: 1rem;
+    display: inline-block;
+    margin-bottom: 1rem;
+}
+
+.discount-icon img {
+    width: 50px;
+    height: 50px;
+}
+
+.discount-card h3 {
+    color: #E1BE08;
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+}
+
+.discount-card p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #555;
+    margin: 0.5rem 0;
+}
+
+.discount-card strong {
+    color: #E1BE08;
+    font-weight: bold;
+}
+
+.cta-button {
+    background-color: #E1BE08;
+    color: #fff;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+    margin-top: 1rem;
+}
+
+.cta-button:hover {
+    background-color: #d1a50a;
+}
+
+
+/* Estilos de pie de página */
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 2rem;
+}
